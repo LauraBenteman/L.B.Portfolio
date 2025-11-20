@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+  color: #2e4a62;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Header */
+
+.site-header {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;      /* adjust size as needed please!*/
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  color: #2e4a62;
+}
+
+/* Nav Style */
+.navbar ul {
+  list-style-type: none;
+  background-color: #A3C5D9;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.navbar a {
+  color: #2e4a62;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #6a9fb5;
+  color: #fff;
+}
+
+/* Content area */
+#content-area {
+  text-align: center;
+  margin: 30px;
+  color: #2e4a62;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main content */
+.main {
+  text-align: center;
+  margin: 10px 20px;
+  max-width: 1200px;
+}
+
+/* Headline */
+#headline {
+  margin: 30px 0 30px;
+  color: #2e4a62;
+}
+
+/* Body copy */
+.bodycopy {
+  text-align: center;
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+}
+
+/* Other content areas */
+#content-area-about,
+#content-area-contact,
+#content-area-work {
+  text-align: center;
+  margin: 30px;
+  color: #2e4a62;
+  justify-content: center;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Portfolio button */
+.Portfolio {
+  display: inline-block;
+  background-color: #6a9fb5;
+  color: #2e4a62;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.Portfolio:hover {
+  background-color: #5a8fa5;
+}
+
+/* Footer */
+.footer {
+  background-color: #A3C5D9;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer button */
+.footer-button {
+  display: inline-block;
+  background-color: #6a9fb5;
+  color: #2e4a62;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #5a8fa5;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 600px) {
+  .logo {
+    width: 45px;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+/* Tablet: Make gallery 2-wide */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone: Stack gallery, simplify layout */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  #headline {
+    font-size: 22px;
+  }
+
+  .main {
+    margin: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile nav adjustment */
+@media (max-width: 700px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .navbar a {
+    padding: 10px;
+  }
+}
